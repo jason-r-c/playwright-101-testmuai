@@ -12,3 +12,9 @@ https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
 Beleive i need to start from 0:0 in https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
+
+# TODO
+Need to 
+- Initialise Playwright as per 1st lesson in the video series
+- Hand copy the spec files from other laptop to this repo
+
