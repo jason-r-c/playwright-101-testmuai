@@ -1,0 +1,23 @@
+{
+  "name": "playwright-101-testmuai",
+  "version": "1.0.0",
+  "description": "Playwright 101 Certification by TestMu AI (formerly LambdaTest)",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-r-c/playwright-101-testmuai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jason-r-c/playwright-101-testmuai/issues"
+  },
+  "homepage": "https://github.com/jason-r-c/playwright-101-testmuai#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  }
+}

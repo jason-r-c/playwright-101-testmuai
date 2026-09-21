@@ -11,10 +11,9 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
-Beleive i need to start from 0:0 in https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
+I need to start from 12 mins 0 secs in https://www.youtube.com/watch?v=JN16nilL8Wg
 
 # TODO
 Need to 
-- Initialise Playwright as per 1st lesson in the video series
 - Hand copy the spec files from other laptop to this repo
 
