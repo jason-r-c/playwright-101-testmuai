@@ -11,7 +11,7 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
-I need to start from 24 mins 45 secs in https://www.youtube.com/watch?v=JN16nilL8Wg
+I need to start from 0 mins 0 secs in https://www.youtube.com/watch?v=EtpASWgbWPg
 
 # TODO
 Need to 
