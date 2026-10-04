@@ -7,26 +7,28 @@ test('Calendar using /key-press page', async ({page}) => {
      * 
      * Using /key-press
      */
-    await page.goto('https://www.testmuai.com/selenium-playground/key-press/')
-    let date = '01/01/2026'
-    await page.fill('#my_field', date)
+    //await fillPlainInputField()
 
-
-    /**
-     * TODO
-     * 
-     * jQuery demo
-     */
-    //const calendar = page.getByRole('textbox', { name: 'From'})
-
-    await page.pause()
+    async function fillPlainInputField() {
+        await page.goto('https://www.testmuai.com/selenium-playground/key-press/')
+        let date = '01/01/2026'
+        await page.fill('#my_field', date)
+    }
 })
 
-test('testing', async ({ page }) => {
+test('Calendar demo using Moment', async ({ page }) => {
     await page.goto('https://www.testmuai.com/selenium-playground/jquery-date-picker-demo/')
     let date = ""
     
-    await page.locator("#from").click()
+    await page.getByRole('textbox', {name: 'From'}).click()
+
+    /**
+     * Store locators to prevous, next and month select element.
+     */
+   const calBtnPrev = await page.getByTitle('Prev').click()
+   const calBtnNxt = await page.getByTitle('Next').click()
+   const calSelectMonth = await page.getByRole('combobox').click()
+
 
     await page.pause()
 

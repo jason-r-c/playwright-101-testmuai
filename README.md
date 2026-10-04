@@ -11,7 +11,7 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
-I need to start from 7 mins 0 secs of 
+I need to start from 10 mins 5 secs of 
 "How To Automate Date Pickers | Playwright With TypeScript Tutorial 🎭| Part 7" 
 in https://www.youtube.com/watch?v=EtpASWgbWPg
 
