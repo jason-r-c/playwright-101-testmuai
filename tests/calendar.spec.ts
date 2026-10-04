@@ -7,7 +7,7 @@ test('Calendar using /key-press page', async ({page}) => {
      * 
      * Using /key-press
      */
-    //await fillPlainInputField()
+    await fillPlainInputField()
 
     async function fillPlainInputField() {
         await page.goto('https://www.testmuai.com/selenium-playground/key-press/')
@@ -16,20 +16,33 @@ test('Calendar using /key-press page', async ({page}) => {
     }
 })
 
-test('Calendar demo using Moment', async ({ page }) => {
-    await page.goto('https://www.testmuai.com/selenium-playground/jquery-date-picker-demo/')
-    let date = ""
-    
-    await page.getByRole('textbox', {name: 'From'}).click()
-
+test('Calendar demo: select Previous Month And First Day', async ({ page }) => {
     /**
      * Store locators to prevous, next and month select element.
      */
-   const calBtnPrev = await page.getByTitle('Prev').click()
-   const calBtnNxt = await page.getByTitle('Next').click()
-   const calSelectMonth = await page.getByRole('combobox').click()
+    const dateTextBox = await page.getByRole('textbox', {name: 'From'})
+    const calBtnPrev = await page.getByTitle('Prev')
+    const calBtnNxt = await page.getByTitle('Next')
+    const calSelectMonth = await page.getByRole('combobox')
 
+    await page.goto('https://www.testmuai.com/selenium-playground/jquery-date-picker-demo/')
+
+   /**
+    * Click previous button to select previous month, get the month number
+    * then click the first of the month
+    */
+    await selectPreviousMonthAndFirstDay()
+
+    async function selectPreviousMonthAndFirstDay() {
+        await dateTextBox.click()
+        await calBtnPrev.click()
+        let dataMonthVal = await page.locator('td[data-handler="selectDay"]').first().getAttribute('data-month')
+        await page.locator(`td[data-month="${dataMonthVal}"] a`).first().click()
+    }
 
     await page.pause()
+})
 
+test('Caalendar demo usig Moment.js', async ({ page }) => {
+    // TODO
 })
