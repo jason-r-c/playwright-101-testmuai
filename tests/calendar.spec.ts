@@ -95,7 +95,7 @@ test('Calendar demo: moment.js', async ({ page }) => {
     let currentlySelectedMonth = await page.locator('[data-handler="selectMonth"] [selected="selected"]').innerText()
     let currentlySelectedYear = await page.locator('.ui-datepicker-year').innerText()
     console.log(`currentlySelectedYear is ${currentlySelectedYear}`+'\n')
-    let endDate: string = 'Nov 2024'
+    let endDate: string = 'Mar 2027'
 
     /**
      * moment.js used for checking if endDate is before the current month

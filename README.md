@@ -11,9 +11,9 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
-I need to start from 13 mins 0 secs of 
-"How To Automate Date Pickers | Playwright With TypeScript Tutorial 🎭| Part 7" 
-in https://www.youtube.com/watch?v=EtpASWgbWPg
+I need to start from 3 mins 40 secs of 
+"How To Upload And Download Files | Playwright With TypeScript Tutorial 🎭| Part 8" 
+in https://www.youtube.com/watch?v=LcGOSOLwdZY
 
 # TODO
 Need to 
