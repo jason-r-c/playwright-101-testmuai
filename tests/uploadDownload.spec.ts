@@ -23,7 +23,14 @@ test('Download files', async({ page }) => {
      * @JC
      * 
      * Array destructuring approach 1:
-     * download1 is accessed WITHOUT using arrya notation
+     * download1 is accessed WITHOUT using array notation
+     * 
+     * Promise.all() 
+     * runs multiple asynchronous operations concurrently 
+     * and waits until they have all completed.
+     * 
+     * Remember: When waiting for an event triggered by an action, put the event listener first, eg, page.waitForEvent('download')
+     * and the action second, wg, page.getByRole('link', {name: 'Download'}).click(), inside Promise.all().
      */
     const [download1] = await Promise.all([
         page.waitForEvent('download'),
@@ -58,8 +65,42 @@ test('Download files', async({ page }) => {
     const path = await download1.path()
     console.log(`Note: Downloaded files are deleted when the browser context that produced them is closed.`)
     console.log(`eg, $path will no longer be accessible once the test has stopped: ${path}`)
+
+    /**
+     * @JC
+     * 
+     * Save file
+     */
+    const fileName = download1.suggestedFilename()
+    console.log(`$fileName is ${fileName}`)
+    await download1.saveAs(fileName)
     
-    
-    
+
+
     await page.pause()
+})
+
+ /** 
+     * @JC
+     * 
+     * Upload file
+    */
+   
+test('Upload file: setInputFiles()', async ({page}) => {
+    await page.goto('https://blueimp.github.io/jQuery-File-Upload/')   
+    await page.setInputFiles('[name="files[]"]',['Lambdainfo.txt','Lambdainfo2.txt'])
+    await page.pause()
+})
+
+test('Upload file: setFiles()', async ({page}) => {
+    await page.goto('https://blueimp.github.io/jQuery-File-Upload/')   
+    
+    const [uploadFiles] = await Promise.all([
+        page.waitForEvent('filechooser'),
+        page.click('[name="files[]"]')
+    ])
+
+    await uploadFiles.setFiles(['Lambdainfo.txt','Lambdainfo2.txt'])
+    await page.pause()
+
 })
