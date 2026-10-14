@@ -8,4 +8,19 @@ export default class HomePage {
         await this.page.locator('span').filter({ hasText: 'Special' })
             .first().click()
     }
+
+    async addFirstProductToTheCart() {
+        const product = this.page.locator('#entry_218399 .image a').first()
+        await product.scrollIntoViewIfNeeded()
+        await product.hover()
+    
+        await this.page.locator('#entry_218399 .product-action button[title="Add to Cart"]')
+            .first().click()            
+    }
+
+    async isToastVisible() {
+        const toast = this.page.locator('//a[.="View Cart "]')
+        await toast.waitFor({state: 'visible'})
+        return toast        
+    }
 }

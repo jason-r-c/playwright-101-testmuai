@@ -4,7 +4,7 @@ export default class SpecialHotPage {
     
     constructor(public page: Page) { }
 
-    async addFirstProductToTheCar() {
+    async addFirstProductToTheCart() {
 
     }
 
