@@ -21,8 +21,9 @@ test('addFirstProductToTheCart()', async ({ page }) => {
 
     const toast = page.locator('//a[.="View Cart "]')
     await toast.waitFor({state: 'visible'})
-    await toast.click()
-    await page.pause()
+    return toast
+    
+    //await page.pause()
 })
 
 test('', async ({ page }) => {
