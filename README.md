@@ -11,7 +11,7 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
-I need to start from 13 mins 55 secs of 
+I need to start from 21 mins 45 secs of 
 "Page Object Model In Playwright | Playwright With TypeScript Tutorial 🎭| Part 9"
 in https://www.youtube.com/watch?v=XBSpY_v21iI
 
