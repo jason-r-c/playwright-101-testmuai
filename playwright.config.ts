@@ -46,7 +46,16 @@ export default defineConfig({
      */
     launchOptions: {
       slowMo: 1000
-    }
+    },
+
+    /**
+     * @JC
+     * baseURL
+     * Sets the url of site that will always be used for testing against
+     * This is the concept of 'fixtures'
+     * To use in a test: test('Register test_01', async ({ page, baseURL }) => {}
+     */
+    baseURL: 'https://ecommerce-playground.lambdatest.io/index.php?route='
   },
 
   /* Configure projects for major browsers */

@@ -26,37 +26,61 @@ export default class RegisterPage {
      * recommended
      */
     async enterFirstName(firstName: string) {
-        await this.page.getByRole('textbox', {name: 'firstname'})
+        await this.page.locator('#input-firstname')
             .fill(firstName)
     }
     async enterLastName(lastName: string) {
-        await this.page.getByRole('textbox', {name: 'lastname'})
+        await this.page.locator('#input-lastname')
             .fill(lastName)
     }
     async enterEmail(email: string) {
-        await this.page.getByRole('textbox', {name: 'email'})
+        await this.page.locator('#input-email')
             .fill(email)
     }
     async enterTelephone(phone: string) {
-        await this.page.getByRole('textbox', {name: 'telephone'})
+        await this.page.locator('#input-telephone')
             .fill(phone)
     }
     async enterPassword(password: string) {
-        await this.page.getByRole('textbox', {name: 'password'})
+        await this.page.locator('#input-password')
             .fill(password)
     }
     async enterConfirmPassword(password: string) {
-        await this.page.getByRole('textbox', {name: 'confirm'})
+        this.page.getByRole('textbox', {name: 'confirm'})
             .fill(password)
     }
-    async isSubscribed() {
-        return await this.page.getByLabel('input-newsletter-no').isChecked()
+
+    /**
+     * @JC
+     * No need for async on this method.
+     * async  makes a function return a Promise.
+     * this.page.getByLabel() already returns a Locator immediately; it doesn't need await.
+     * Removing async lets TypeScript infer the return type as Locator, which supports .toBeChecked()
+     * 
+     * @returns Locator for the subscribe checkbox
+     */
+    isSubscribedChecked() {
+        //return this.page.getByLabel('input-newsletter-no')
+        return this.page.locator('#input-newsletter-no')
     }
     async clickAgreedTermsAndConditions() {
-        await this.page.getByRole('textbox', {name: 'input-agree'}).click()
+        await this.page.locator('[for="input-agree"]')
+            .click()
     }
+
+
+    /**
+     * @JC
+     * 
+     * Waits until the register page has fully loaded, 
+     * then clicks on the register button
+     */
     async clickContinueToRegister() {
-        await this.page.getByRole('textbox', {name: 'Continue'}).click()
+        await Promise.all([
+            this.page.waitForURL('**/register', {waitUntil: 'networkidle'}),
+            this.page.locator('[value="Continue"]')
+                .click()
+        ])        
     }
 
 
