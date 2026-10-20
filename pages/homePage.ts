@@ -15,7 +15,7 @@ export default class HomePage {
 
     /**
      * Note
-     * Dosnt work very well for some reason....
+     * addFirstProductToTheCart() Dosnt work very well for some reason....
      * The page constanly jumps and fails frequently
      */
     async addFirstProductToTheCart() {

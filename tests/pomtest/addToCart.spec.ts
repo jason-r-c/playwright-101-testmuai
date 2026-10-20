@@ -59,11 +59,9 @@ test('Add to cart test_03', async ({ page, baseURL }) => {
     // Desktops page
     await desktopsPage.selectFirstDeskopItem()
         
-
-    //await homePage.addFirstProductToTheCart()
-    
-    // const isCartVisible = await homePage.isToastVisible()
-    // await expect(isCartVisible).toBeVisible()
+    // Confirms the cart notification is displyed
+    const isCartVisible = await homePage.isToastVisible()
+    await expect(isCartVisible).toBeVisible()
     
 
     //await page.pause()
