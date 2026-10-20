@@ -1,14 +1,23 @@
-import { Page } from "@playwright/test"
+import { Page, expect } from "@playwright/test"
 
 export default class HomePage {
 
     constructor(public page: Page) { }
 
-    async clickOnSpecialHotMenu() {
-        await this.page.locator('span').filter({ hasText: 'Special' })
+    async clickOnHomePageMenu() {
+        await this.page.locator('#entry_217834 a')            
             .first().click()
     }
+    async clickOnSpecialHotMenu() {
+        await this.page.locator('#entry_217834 a')            
+            .nth(1).click()
+    }
 
+    /**
+     * Note
+     * Dosnt work very well for some reason....
+     * The page constanly jumps and fails frequently
+     */
     async addFirstProductToTheCart() {
         const product = this.page.locator('#entry_218399 .image a').first()
         await product.scrollIntoViewIfNeeded()
