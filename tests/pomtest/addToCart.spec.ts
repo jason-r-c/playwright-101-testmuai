@@ -15,6 +15,15 @@ import DesktopsPage from "../../pages/desktopsPage"
 const email = 'john.doe@test3.com'
 const password = 'pass123'
 
+ /**
+  * @JC
+  * Useful on a test by test basis for specifyng which browser to use
+  * 
+    test.use({
+        browserName: "webkit"
+    })
+*/
+
 /**
  * @JC 
  * test.describe(): Runs all test scenarios at once/in parallel
