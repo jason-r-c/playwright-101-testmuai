@@ -14,7 +14,7 @@
  */
 
 // import the core test object but enhance with our own stuff.
-import {test as myTest} from "@playwright/test"
+import { test as myTest } from "@playwright/test"
 
 // Define our own object which is used for extending test/myTest
 type jasoncarney = {

@@ -65,10 +65,16 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
+    /**
+     * @JC
+     * Commented out as firefox has a bug upstream
+     * See https://github.com/microsoft/playwright/issues/42768?utm_source=chatgpt.com
+     
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
+     */
 
     {
       name: 'webkit',
