@@ -75,9 +75,7 @@ test('Download files', async({ page }) => {
     console.log(`$fileName is ${fileName}`)
     await download1.saveAs(fileName)
     
-
-
-    await page.pause()
+    // await page.pause()
 })
 
  /** 
@@ -89,7 +87,8 @@ test('Download files', async({ page }) => {
 test('Upload file: setInputFiles()', async ({page}) => {
     await page.goto('https://blueimp.github.io/jQuery-File-Upload/')   
     await page.setInputFiles('[name="files[]"]',['Lambdainfo.txt','Lambdainfo2.txt'])
-    await page.pause()
+    
+    // await page.pause()
 })
 
 test('Upload file: setFiles()', async ({page}) => {
@@ -101,6 +100,7 @@ test('Upload file: setFiles()', async ({page}) => {
     ])
 
     await uploadFiles.setFiles(['Lambdainfo.txt','Lambdainfo2.txt'])
-    await page.pause()
+   
+    // await page.pause()
 
 })

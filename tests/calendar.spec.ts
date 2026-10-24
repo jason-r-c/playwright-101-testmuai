@@ -40,7 +40,7 @@ test('Calendar demo: select Previous Month And First Day of that month', async (
         await page.locator(`td[data-month="${dataMonthVal}"] a`).first().click()
     }
 
-    await page.pause()
+    // await page.pause()
 })
 
 test('Calendar demo: Select previous month until we reach Jan', async ({ page }) => {
@@ -74,7 +74,7 @@ test('Calendar demo: Select previous month until we reach Jan', async ({ page })
         console.log('currentlySelectedMonth is: '+currentlySelectedMonth)
     }
 
-    await page.pause()
+    // await page.pause()
 })
 
 test('Calendar demo: moment.js', async ({ page }) => {
@@ -135,5 +135,5 @@ test('Calendar demo: moment.js', async ({ page }) => {
         console.log(`the year and month together is: ${currentlySelectedMonth} ${currentlySelectedYear} >>>`+'\n')
     }
 
-    //await page.pause()
+    // await page.pause()
 })

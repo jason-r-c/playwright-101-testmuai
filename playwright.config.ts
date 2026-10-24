@@ -22,13 +22,18 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-    reporter: [
-    ['html', { outputFolder: 'test-results' }],
+  reporter: [
+    ['html', { outputFolder: 'playwright-report' }],
     ['list'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   
-  // Runs the actual test specified in the array
+  outputDir: 'test-results',
+
+  /**
+   * @JC
+   * Runs the actual test specified in the array
+   */
   // testMatch: ['tests/XXX.spec.ts'],
 
   use: {
@@ -37,7 +42,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
 
     /** 
      * @JC
@@ -60,10 +65,10 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
 
     /**
      * @JC
@@ -76,20 +81,24 @@ export default defineConfig({
     },
      */
 
+    /**
+     * @JC
+     * Commented out purely just so Chrome runs
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    */
 
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
     // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: 'Mobile Safari',
+      use: { ...devices['iPhone 12'] },
+    },
 
     /* Test against branded browsers. */
     // {

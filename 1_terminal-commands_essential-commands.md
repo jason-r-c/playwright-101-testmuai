@@ -15,7 +15,7 @@ Should run in headed mode but if it dosnt run:
 npx playwright test --headed
 ```
 
-## Run test/s using the UI test runner
+## Run test/s using the UI test runner / interactive test runner
 ```
 npx playwright test --ui
 ```
@@ -71,3 +71,10 @@ npx playwright --help
 ```
 
 ![playwright-help](terminal-playwright-commands-images/playwright-help.jpg)
+
+## Show report after running test/s from command line
+```
+npx playwright show-report test-results
+```
+This starts up a web server, hosts the test file and shows it in the web browser
+![playwright-version](terminal-playwright-commands-images/playwright-show-test-result-report.jpg)
