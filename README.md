@@ -11,8 +11,10 @@ https://github.com/jason-r-c/playwright-101-testmuai/tree/main
 https://www.youtube.com/watch?v=FUvH1l4o7Os&t=210s
 
 ## Course Progress
+I need to carry on from "4. Screenshots, traces and reports" - see "npx playwright test --video retain-on-failure" in https://chatgpt.com/share/6adca84d-187c-83ed-aef2-3637b34bdc04
+
 I need to start from 7 mins 0 secs of 
-"Page Object Model In Playwright | Playwright With TypeScript Tutorial 🎭| Part 11" in 
+"Cross Browser Testing On TestMu AI Cloud | Playwright With TypeScript Tutorial 🎭| Part 11" in 
 https://www.youtube.com/watch?v=Mb-bkyGK9Ss
 
 # TODO

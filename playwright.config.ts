@@ -60,7 +60,12 @@ export default defineConfig({
      * This is the concept of 'fixtures'
      * To use in a test: test('Register test_01', async ({ page, baseURL }) => {}
      */
-    baseURL: 'https://ecommerce-playground.lambdatest.io/index.php?route='
+    baseURL: 'https://ecommerce-playground.lambdatest.io/index.php?route=',
+
+    /**
+     * @JC
+     */
+    screenshot: 'on'
   },
 
   /* Configure projects for major browsers */
